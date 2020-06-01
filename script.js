@@ -1,6 +1,6 @@
 
 const statusDisplay = document.querySelector('.game--status');
-const URL = "http://127.0.0.1:5000/tree"
+const URL = "http://wassaf.pythonanywhere.com/tree"
 
 let gameActive = true;
 let currentPlayer = "X";
