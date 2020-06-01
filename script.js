@@ -12,7 +12,10 @@ let boardKey = "+++++++++";
 
 
 const winningMessage = () => `Player ${currentPlayer} has won!`;
-const drawMessage = () => `Game ended in a draw!`;
+const drawMessage = () => {
+    alert("I still have much to learn, soo it seems")
+    `Game ended in a draw!`
+};
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
@@ -90,6 +93,7 @@ async function handleCellClick(clickedCellEvent) {
     handleCellPlayed(clickedCell, clickedCellIndex);
     
     if(!moveTree){
+        alert("Let me think Human...")
         await getMoveTree(clickedCellIndex);
      }
      handleResultValidation();
@@ -135,6 +139,7 @@ async function getMoveTree(index){
             })
     })
     .then(response => response.json()).then((data) => {
+        alert("You Have already Lost :)")
         enableBtn()
         moveTree = data
     })};
